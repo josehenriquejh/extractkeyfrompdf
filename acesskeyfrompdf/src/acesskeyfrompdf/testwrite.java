@@ -66,9 +66,10 @@ public class testwrite {
                     String replace = text.replace(temp, "chavedeacesso");
                     text = replace;
                     String replace1 = temp.replace(" ", "");
+                    if(validarchave(replace1)){
                     writer.write(replace1);
-                    writer.write("\r\n");
-                    
+                    writer.write("\r\n");}
+                    //System.out.println(validarchave(replace1) + " = dv.");
                     //text.substring(ind, ind+64).replace(" ", "");
                 }   
                 writer.write("\r\n");
@@ -84,6 +85,45 @@ public class testwrite {
     
     }
     
+    public boolean validarchave(String chave){
+   
+        
+    for(int i = 0; i < chave.length(); i++){
+    //System.out.println("char "+ i + " = " + chave.charAt(i));
+    //dv = chave.charAt(43);
     
+    }    
+        
+    char dv;
+    int soma, i, r, num, peso;
+    soma = 0;
+    peso = 2;
+    
+    for (i=42; i>=0; i--) {
+    
+    num = (int)(chave.charAt(i) - 48);
+    //System.out.println("num = "+ num);
+    soma = soma + (num * peso);
+    peso = peso + 1;
+      if (peso == 10) peso = 2;
+      if (peso == 0) peso = 9;
+      }
+    
+      
+    
+    r = soma % 11;
+      if ((r == 0) || (r == 1))
+         dv = '0';
+      else dv = (char)((11-r) + 48);
+    
+    if(dv == chave.charAt(43)){
+    return true;
+    
+    } else { 
+    return false;}
+    
+    
+    
+    }
 }
 
