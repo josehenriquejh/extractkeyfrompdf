@@ -45,8 +45,8 @@ public class testwrite {
                     System.out.println("temp = " + temp);
                     String replace = text.replace(temp, "chavedeacesso");
                     text = replace;
-                    String replace1 = temp.replace(" ", "");
-                    if (validarchave(replace1)) {
+                    String replace1 = temp.replace(" ", "").replace(",","");
+                    if (validarchave(replace1) && replace1.length() == 44) {
                         writer.write(replace1);
                         writer.write("\r\n");
                     }
@@ -92,13 +92,9 @@ public class testwrite {
         } else {
             dv = (char) ((11 - r) + 48);
         }
-
-        if (dv == chave.charAt(43)) {
-            return true;
-
-        } else {
-            return false;
-        }
+           
+        System.out.println("dv = " + dv);
+        return dv == chave.charAt(43);
 
     }
 }
