@@ -21,6 +21,9 @@ public class testwrite {
         int ind;
         String temp;
 
+        if(caminhopdf == null){
+        JOptionPane.showMessageDialog(null, "O caminho do arquivo pdf é inválido!");
+        }
         File myFile = new File(caminhopdf);
 
         try (PDDocument doc = PDDocument.load(myFile)) {
@@ -29,7 +32,7 @@ public class testwrite {
             String text = stripper.getText(doc);
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();
-            try (FileWriter writer = new FileWriter(caminhotxt + ".txt", true)) {
+            try (FileWriter writer = new FileWriter(caminhotxt, true)) {
                 writer.write(dateFormat.format(date));
                 writer.write("\r\n");
                 if (!text.contains(chave + " ")) {

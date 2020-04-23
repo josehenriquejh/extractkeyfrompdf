@@ -147,7 +147,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Caminho do TXT com as chaves (Padrao C:)"/>
+        <Property name="text" type="java.lang.String" value="Caminho para salvar TXT com as chaves (Padrao C:)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

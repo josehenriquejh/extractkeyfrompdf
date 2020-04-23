@@ -85,7 +85,7 @@ public class frame2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Caminho do TXT com as chaves (Padrao C:)");
+        jLabel1.setText("Caminho para salvar TXT com as chaves (Padrao C:)");
 
         jLabel2.setText("4 Primeiros Digitos da Chave de acesso");
 
@@ -214,7 +214,7 @@ public class frame2 extends javax.swing.JFrame {
                 }
             }
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Inconsistência no Preenchimento!");
+            JOptionPane.showMessageDialog(null, "O sistema não pode encontrar o arquivo especificado!");
             Logger.getLogger(frame2.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnconsultaActionPerformed
@@ -254,7 +254,7 @@ public class frame2 extends javax.swing.JFrame {
             }
         });
     }
-
+    
     public void openfile(File file) throws IOException {
         desktop.open(file);
 
