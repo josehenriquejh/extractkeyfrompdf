@@ -182,7 +182,7 @@ public class frame2 extends javax.swing.JFrame {
      if(!caminhotxt.contains(".txt")){
      caminhotxt = caminhotxt+".txt";}
      else {
-     }// TODO add your handling code here:
+     }
     }//GEN-LAST:event_btntxtActionPerformed
 
     private void btnconsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnconsultaActionPerformed
